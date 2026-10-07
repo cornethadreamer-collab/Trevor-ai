@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trevor — AI Friend</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #05070d;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      padding: 30px 22px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      letter-spacing: 4px;
+    }
+
+    .status {
+      margin-top: 8px;
+      color: #6ee7ff;
+      font-size: 13px;
+    }
+
+    .core {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      margin: 70px auto 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, #8ff5ff 0%, #1689a5 35%, #06141d 70%);
+      box-shadow:
+        0 0 25px #21d4fd,
+        0 0 70px rgba(33, 212, 253, .35);
+      animation: pulse 3s infinite;
+    }
+
+    .core::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.8);
+      box-shadow: 0 0 25px white;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.06);
+      }
+    }
+
+    .greeting {
+      text-align: center;
+      margin-bottom: auto;
+    }
+
+    .greeting h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .greeting p {
+      color: #a9b1c3;
+      line-height: 1.5;
+    }
+
+    .talk {
+      border: none;
+      border-radius: 50px;
+      padding: 17px;
+      margin: 35px 0 20px;
+      background: white;
+      color: #05070d;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 15px;
+      border-top: 1px solid #1b2230;
+      color: #8993a8;
+      font-size: 13px;
+    }
+
+    .nav span {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="header">
+      <h1>TREVOR</h1>
+      <div class="status">● ONLINE</div>
+    </header>
+
+    <div class="core"></div>
+
+    <section class="greeting">
+      <h2>Hey. I'm Trevor.</h2>
+      <p>
+        Your personal AI friend.<br>
+        Smart. Honest. Always here.
+      </p>
+    </section>
+
+    <button class="talk" onclick="startTalking()">
+      🎙️ Talk to Trevor
+    </button>
+
+    <nav class="nav">
+      <span>Chat</span>
+      <span>Memory</span>
+      <span>Settings</span>
+    </nav>
+
+  </main>
+
+  <script>
+    function startTalking() {
+      alert("Trevor is listening...");
+    }
+  </script>
+
+</body>
+</html>
